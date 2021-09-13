@@ -17,6 +17,12 @@ arvore.inserir(84)
 arvore.inserir(79)
 arvore.inserir(89)
 
-# print(arvore.raiz.esquerda.valor)
-# print(arvore.raiz.direita.valor)
+print(arvore.raiz.esquerda.valor)
+print(arvore.raiz.direita.valor)
 print(arvore.ligacoes)
+
+arvore.pesquisar(89)
+if arvore.pesquisar(89) is None:
+  print('Elemento não localizado.')
+else:
+  print('Elemento localizado.')
