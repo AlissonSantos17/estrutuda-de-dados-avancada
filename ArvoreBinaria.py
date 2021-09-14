@@ -65,7 +65,7 @@ class ArvoreBinaria:
     return altura_esquerda + 1
 
   def profundidade():
-    pass
+    return 'IMPLEMENTAR'
   
   def nivel(self, valor):
     return self.grau(valor)
@@ -73,7 +73,29 @@ class ArvoreBinaria:
   def noFolha(self, valor):
     if valor is None:
       return 0
-    if(valor.esquerda is None and valor.direita):
+    if(valor.esquerda is None and valor.direita is None):
       return 1
     return self.noFolha(valor.esquerda) + self.noFolha(valor.direita)
 
+  def iniciarMetodos(self):
+    print()
+    print(f'Nó -> {entradaNo}')
+    print(f'LIGAÇÕES = {arvore.ligacoes}')
+    print(f" NÓS FOLHAS 🍃 = {arvore.noFolha(self.raiz)}")
+    print(f" GRAU ° = {arvore.grau(self.raiz)}")
+    print(f" ALTURA 📏 = {arvore.altura()}")
+    print(f" PROFUNDIDADE 📏 = ")
+    print(f" NÍVEL 🆙 = {arvore.nivel(self.raiz) + 1}")
+    print(f" SUBARVORES ​🌳​​ -> 🌳​​​ = ")
+
+if __name__ == '__main__':  
+  arvore = ArvoreBinaria()
+
+  qtdNo = int(input('Quantidade de Nó: '))
+  no = []
+
+  for i in range(qtdNo):
+    entradaNo = int(input('Digite um número: '))
+    arvore.inserir(entradaNo)
+
+    arvore.iniciarMetodos()
