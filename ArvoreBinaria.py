@@ -38,14 +38,16 @@ class ArvoreBinaria:
       else:
         atual = atual.direita
       if (atual is None):
-        return None
+        return 'Nó não encontrado.'
     return atual
-  
-  def getNoFolha():
-    pass
 
-  def getGrau(self, no_atual):
-    pass
+  def grau(self, no_atual):
+    if(no_atual.esquerda is None and no_atual.direita is None):
+      return 0
+    elif(no_atual.esquerda != None and no_atual.direita != None):
+      return 2
+    else:
+      return 1
 
   def altura(self, no=None):
     if no is None:
@@ -62,8 +64,16 @@ class ArvoreBinaria:
       return altura_direita + 1
     return altura_esquerda + 1
 
-  def getProfundidadeNo():
+  def profundidade():
     pass
   
-  def getNivel():
-    pass
+  def nivel(self, valor):
+    return self.grau(valor)
+
+  def noFolha(self, valor):
+    if valor is None:
+      return 0
+    if(valor.esquerda is None and valor.direita):
+      return 1
+    return self.noFolha(valor.esquerda) + self.noFolha(valor.direita)
+
