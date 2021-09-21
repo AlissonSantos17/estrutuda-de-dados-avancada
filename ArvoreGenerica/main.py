@@ -25,11 +25,14 @@ def build_tree():
     root.add_child(noF)
 
     # RECUPERA AS FOLHAS
+    print(f'\nRAIZ -> {root.data}')
+
+    # RECUPERA AS FOLHAS
     print(f'\nNÓS FOLHAS 🍃')
     root.get_leafs()
 
     # RECUPERA GRAU
-    print(f'\nGRAU DE CADA NÓ')
+    print(f'\nGRAU DE CADA NÓ °')
     print(f'Nó {root.data} - {root.get_degree()}')
     print(f'Nó {noA.data} - {noA.get_degree()}')
     print(f'Nó {noB.data} - {noB.get_degree()}')
@@ -40,7 +43,7 @@ def build_tree():
     print(f'Nó {noG.data} - {noG.get_degree()}')
 
     # RECUPERA ALTURA
-    print(f'\nALTURA DE CADA NÓ')
+    print(f'\nALTURA DE CADA NÓ 📏')
     print(f'Nó {root.data} - {root.get_height()}')
     print(f'Nó {noA.data} - {noA.get_height()}')
     print(f'Nó {noB.data} - {noB.get_height()}')
@@ -62,7 +65,7 @@ def build_tree():
     print(f'Nó {noG.data} - {noG.get_depth()}')
 
     # RECUPERA O NIVEL
-    print(f'\nNÍVEL DE CADA NÓ')
+    print(f'\nNÍVEL DE CADA NÓ 🎚️')
     print(f'Nó {root.data} - {root.get_level()}')
     print(f'Nó {noA.data} - {noA.get_level()}')
     print(f'Nó {noB.data} - {noB.get_level()}')
@@ -73,7 +76,7 @@ def build_tree():
     print(f'Nó {noG.data} - {noG.get_level()}')
 
     # RECUPERA AS SUBARVORES
-    print(f'\nSUBARVORES DE CADA NÓ:')
+    print(f'\nSUBARVORES DE CADA NÓ 🌳 -> 🌳:')
     print('Nó RAIZ')
     root.print_tree()
     print(f'\nSUBARVORE DO NÓ {noA.data}')
