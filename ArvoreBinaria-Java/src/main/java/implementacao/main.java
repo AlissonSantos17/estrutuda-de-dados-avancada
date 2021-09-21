@@ -11,249 +11,100 @@ public class main {
         arvore.adicionaNo(new No(120), arvore.getArvoreBinaria());
         arvore.adicionaNo(new No(103), arvore.getArvoreBinaria());
 
-        System.out.println("________________________________________________");
-        System.out.println("ILUSTRAÇÃO EM ORDEM:");
+        System.out.println("ILUSTRAÇÃO");
+        System.out.println("Em-Ordem");
         arvore.imprimirEmOrdem(arvore.getArvoreBinaria());
-
-/*
-        System.out.println("");
-
-        System.out.println("________________________________________________");
-        System.out.println("ILUSTRAÇÃO EM PRÉ-ORDEM:");
+        System.out.println("\n");
+        System.out.println("############################################");
+        System.out.println("Pré-Ordem");
         arvore.imprimirPreOrdem(arvore.getArvoreBinaria());
-*/
-
-/*
-        System.out.println("");
-
-        System.out.println("________________________________________________");
-        System.out.println("ILUSTRAÇÃO EM PÓS-ORDEM:");
+        System.out.println("\n");
+        System.out.println("############################################");
+        System.out.println("Pós-Ordem");
         arvore.imprimirPosOrdem(arvore.getArvoreBinaria());
-*/
-        System.out.println("");
-
-        System.out.println("________________________________________________");
-        System.out.println("PESQUISA:");
-        arvore.busca(50);
-
-        System.out.println("");
-
-        System.out.println("________________________________________________");
-        System.out.println("VERIFICAR GRAU DO NÓ:");
+        System.out.println("\n");
+        System.out.println("############################################");
+        System.out.println("GRAU");
+        System.out.println("Nó: [50]");
         arvore.verificarGrau(50);
-
-        System.out.println("");
-
-        System.out.println("________________________________________________");
-        System.out.println("VERIFICAR ALTURA DO NÓ:");
-        arvore.verificaAltura(50);
-
-        System.out.println("");
-
-        System.out.println("________________________________________________");
-        System.out.println("VERIFICAR PROFUNDIDADE DO NÓ:");
-        arvore.verificarProfundidade(50);
-
-        System.out.println("");
-
-        System.out.println("________________________________________________");
-        System.out.println("VERIFICAR NÍVEL DO NÓ:");
-        arvore.verificarNivel(50);
-
-        System.out.println("");
-
-        System.out.println("________________________________________________");
-        System.out.println("SUBARVORES DO NÓ:");
-        arvore.subArvore(50);
-
-        System.out.println("");
-        System.out.println("___________________________________________________________");
-        System.out.println("");
-
-        System.out.println("________________________________________________");
-        System.out.println("PESQUISA:");
-        arvore.busca(110);
-
-        System.out.println("");
-
-        System.out.println("________________________________________________");
-        System.out.println("VERIFICAR GRAU DO NÓ:");
+        System.out.println("\n");
+        System.out.println("Nó: [110]");
         arvore.verificarGrau(110);
-
-        System.out.println("");
-
-        System.out.println("________________________________________________");
-        System.out.println("VERIFICAR ALTURA DO NÓ:");
-        arvore.verificaAltura(110);
-
-        System.out.println("");
-
-        System.out.println("________________________________________________");
-        System.out.println("VERIFICAR PROFUNDIDADE DO NÓ:");
-        arvore.verificarProfundidade(110);
-
-        System.out.println("");
-
-        System.out.println("________________________________________________");
-        System.out.println("VERIFICAR NÍVEL DO NÓ:");
-        arvore.verificarNivel(110);
-
-        System.out.println("");
-
-        System.out.println("________________________________________________");
-        System.out.println("SUBARVORES DO NÓ:");
-        arvore.subArvore(110);
-
-        System.out.println("");
-        System.out.println("___________________________________________________________");
-        System.out.println("");
-
-        System.out.println("________________________________________________");
-        System.out.println("PESQUISA:");
-        arvore.busca(25);
-
-        System.out.println("");
-
-        System.out.println("________________________________________________");
-        System.out.println("VERIFICAR GRAU DO NÓ:");
+        System.out.println("\n");
+        System.out.println("Nó: [25]");
         arvore.verificarGrau(25);
-
-        System.out.println("");
-
-        System.out.println("________________________________________________");
-        System.out.println("VERIFICAR ALTURA DO NÓ:");
-        arvore.verificaAltura(25);
-
-        System.out.println("");
-
-        System.out.println("________________________________________________");
-        System.out.println("VERIFICAR PROFUNDIDADE DO NÓ:");
-        arvore.verificarProfundidade(25);
-
-        System.out.println("");
-
-        System.out.println("________________________________________________");
-        System.out.println("VERIFICAR NÍVEL DO NÓ:");
-        arvore.verificarNivel(25);
-
-        System.out.println("");
-
-        System.out.println("________________________________________________");
-        System.out.println("SUBARVORES DO NÓ:");
-        arvore.subArvore(25);
-
-        System.out.println("");
-        System.out.println("___________________________________________________________");
-        System.out.println("");
-
-        System.out.println("________________________________________________");
-        System.out.println("PESQUISA:");
-        arvore.busca(105);
-
-        System.out.println("");
-
-        System.out.println("________________________________________________");
-        System.out.println("VERIFICAR GRAU DO NÓ:");
+        System.out.println("\n");
+        System.out.println("Nó: [105]");
         arvore.verificarGrau(105);
-
-        System.out.println("");
-
-        System.out.println("________________________________________________");
-        System.out.println("VERIFICAR ALTURA DO NÓ:");
-        arvore.verificaAltura(105);
-
-        System.out.println("");
-
-        System.out.println("________________________________________________");
-        System.out.println("VERIFICAR PROFUNDIDADE DO NÓ:");
-        arvore.verificarProfundidade(105);
-
-        System.out.println("");
-
-        System.out.println("________________________________________________");
-        System.out.println("VERIFICAR NÍVEL DO NÓ:");
-        arvore.verificarNivel(105);
-
-        System.out.println("");
-
-        System.out.println("________________________________________________");
-        System.out.println("SUBARVORES DO NÓ:");
-        arvore.subArvore(105);
-
-        System.out.println("");
-        System.out.println("___________________________________________________________");
-        System.out.println("");
-
-        System.out.println("________________________________________________");
-        System.out.println("PESQUISA:");
-        arvore.busca(120);
-
-        System.out.println("");
-
-        System.out.println("________________________________________________");
-        System.out.println("VERIFICAR GRAU DO NÓ:");
+        System.out.println("\n");
+        System.out.println("Nó: [120]");
         arvore.verificarGrau(120);
-
-        System.out.println("");
-
-        System.out.println("________________________________________________");
-        System.out.println("VERIFICAR ALTURA DO NÓ:");
-        arvore.verificaAltura(120);
-
-        System.out.println("");
-
-        System.out.println("________________________________________________");
-        System.out.println("VERIFICAR PROFUNDIDADE DO NÓ:");
-        arvore.verificarProfundidade(120);
-
-        System.out.println("");
-
-        System.out.println("________________________________________________");
-        System.out.println("VERIFICAR NÍVEL DO NÓ:");
-        arvore.verificarNivel(120);
-
-        System.out.println("");
-
-        System.out.println("________________________________________________");
-        System.out.println("SUBARVORES DO NÓ:");
-        arvore.subArvore(120);
-
-        System.out.println("");
-        System.out.println("___________________________________________________________");
-        System.out.println("");
-
-        System.out.println("________________________________________________");
-        System.out.println("PESQUISA:");
-        arvore.busca(103);
-
-        System.out.println("");
-
-        System.out.println("________________________________________________");
-        System.out.println("VERIFICAR GRAU DO NÓ:");
+        System.out.println("\n");
+        System.out.println("Nó: [103]");
         arvore.verificarGrau(103);
-
-        System.out.println("");
-
-        System.out.println("________________________________________________");
-        System.out.println("VERIFICAR ALTURA DO NÓ:");
+        System.out.println("\n");
+        System.out.println("############################################");
+        System.out.println("ALTURA");
+        System.out.println("Nó: [50]");
+        arvore.verificaAltura(50);
+        System.out.println("\n");
+        System.out.println("Nó: [110]");
+        arvore.verificaAltura(110);
+        System.out.println("\n");
+        System.out.println("Nó: [25]");
+        arvore.verificaAltura(25);
+        System.out.println("\n");
+        System.out.println("Nó: [105]");
+        arvore.verificaAltura(105);
+        System.out.println("\n");
+        System.out.println("Nó: [120]");
+        arvore.verificaAltura(120);
+        System.out.println("\n");
+        System.out.println("Nó: [103]");
         arvore.verificaAltura(103);
-
-        System.out.println("");
-
-        System.out.println("________________________________________________");
-        System.out.println("VERIFICAR PROFUNDIDADE DO NÓ:");
+        System.out.println("\n");
+        System.out.println("############################################");
+        System.out.println("PROFUNDIDADE");
+        System.out.println("Nó: [50]");
+        arvore.verificarProfundidade(50);
+        System.out.println("\n");
+        System.out.println("Nó: [110]");
+        arvore.verificarProfundidade(110);
+        System.out.println("\n");
+        System.out.println("Nó: [25]");
+        arvore.verificarProfundidade(25);
+        System.out.println("\n");
+        System.out.println("Nó: [105]");
+        arvore.verificarProfundidade(105);
+        System.out.println("\n");
+        System.out.println("Nó: [120]");
+        arvore.verificarProfundidade(120);
+        System.out.println("\n");
+        System.out.println("Nó: [103]");
         arvore.verificarProfundidade(103);
-
-        System.out.println("");
-
-        System.out.println("________________________________________________");
-        System.out.println("VERIFICAR NÍVEL DO NÓ:");
+        System.out.println("\n");
+        System.out.println("############################################");
+        System.out.println("NÍVEL");
+        System.out.println("Nó: [50]");
+        arvore.verificarNivel(50);
+        System.out.println("\n");
+        System.out.println("Nó: [110]");
+        arvore.verificarNivel(110);
+        System.out.println("\n");
+        System.out.println("Nó: [25]");
+        arvore.verificarNivel(25);
+        System.out.println("\n");
+        System.out.println("Nó: [105]");
+        arvore.verificarNivel(105);
+        System.out.println("\n");
+        System.out.println("Nó: [120]");
+        arvore.verificarNivel(120);
+        System.out.println("\n");
+        System.out.println("Nó: [103]");
         arvore.verificarNivel(103);
+        System.out.println("\n");
+        System.out.println("############################################");
+        System.out.println("SUBARVORES");
 
-        System.out.println("");
-
-        System.out.println("________________________________________________");
-        System.out.println("SUBARVORES DO NÓ:");
-        arvore.subArvore(103);
     }
 }

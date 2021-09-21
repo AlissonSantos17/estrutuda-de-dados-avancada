@@ -43,7 +43,6 @@ public class ArvoreBinaria {
     }
 
     public No busca(No no, int valor) {
-        System.out.println("Focando no Nó -> " + no.valor);
         if(no.valor == valor) {
             System.out.println("O Nó " + valor + " foi encontrado!");
             return no;
