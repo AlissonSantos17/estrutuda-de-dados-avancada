@@ -11,5 +11,45 @@ class GenericTree:
         child.parent = self
         self.children.append(child)
 
+    def get_level(self):
+        level = 0
+        p = self.parent
+        while p:
+            level += 1
+            p = p.parent
+
+        return level
+
+    def get_leafs(self):
+        if(self.children):
+            for children in self.children:
+                children.get_leafs()
+        else:
+            print(self.data)
+
+    def get_degree(self):
+        return len(self.children)
+
+    def get_height(self):
+        h = 0
+        anc = self.parent
+        while (anc):
+            h += 1
+            anc = anc.parent
+        return h
+
+    def get_depth(self):
+        p = 0
+        anc = self.parent
+        while(anc):
+            p += 1
+            anc = anc.parent
+        return p
+
     def print_tree(self):
-        print(self.data)
+        spaces = ' ' * self.get_level() * 3
+        prefix = spaces + "|__" if self.parent else ""
+        print(prefix + str(self.data))
+        if self.children:
+            for child in self.children:
+                child.print_tree()
