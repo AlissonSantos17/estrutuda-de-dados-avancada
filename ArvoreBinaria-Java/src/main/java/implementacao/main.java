@@ -2,109 +2,49 @@ package implementacao;
 
 public class main {
     public static void main(String[] args) {
-        ArvoreBinaria arvore = new ArvoreBinaria(100);
+/*        ArvoreBinaria arvore = new ArvoreBinaria(50);
+        arvore.adicionaNo(new No(3), arvore.getArvoreBinaria());
+        arvore.adicionaNo(new No(70), arvore.getArvoreBinaria());
+        arvore.adicionaNo(new No(2), arvore.getArvoreBinaria());
+        arvore.adicionaNo(new No(4), arvore.getArvoreBinaria());
+        arvore.adicionaNo(new No(8), arvore.getArvoreBinaria());
+        arvore.adicionaNo(new No(6), arvore.getArvoreBinaria());
+        arvore.adicionaNo(new No(9), arvore.getArvoreBinaria());
 
-        arvore.adicionaNo(new No(50), arvore.getArvoreBinaria());
-        arvore.adicionaNo(new No(110), arvore.getArvoreBinaria());
-        arvore.adicionaNo(new No(25), arvore.getArvoreBinaria());
-        arvore.adicionaNo(new No(105), arvore.getArvoreBinaria());
-        arvore.adicionaNo(new No(120), arvore.getArvoreBinaria());
-        arvore.adicionaNo(new No(103), arvore.getArvoreBinaria());
-
-        System.out.println("ILUSTRAÇÃO");
-        System.out.println("Em-Ordem");
-        arvore.imprimirEmOrdem(arvore.getArvoreBinaria());
+        System.out.println("Árvore Original:");
+        arvore.imprimir();
         System.out.println("\n");
-        System.out.println("############################################");
-        System.out.println("Pré-Ordem");
+
+        System.out.println("Pré-Ordem:");
         arvore.imprimirPreOrdem(arvore.getArvoreBinaria());
-        System.out.println("\n");
-        System.out.println("############################################");
-        System.out.println("Pós-Ordem");
+
+        System.out.println("\nEm-Ordem:");
+        arvore.imprimirEmOrdem(arvore.getArvoreBinaria());
+
+        System.out.println("\nPós-Ordem:");
         arvore.imprimirPosOrdem(arvore.getArvoreBinaria());
         System.out.println("\n");
-        System.out.println("############################################");
-        System.out.println("GRAU");
-        System.out.println("Nó: [50]");
-        arvore.verificarGrau(50);
-        System.out.println("\n");
-        System.out.println("Nó: [110]");
-        arvore.verificarGrau(110);
-        System.out.println("\n");
-        System.out.println("Nó: [25]");
-        arvore.verificarGrau(25);
-        System.out.println("\n");
-        System.out.println("Nó: [105]");
-        arvore.verificarGrau(105);
-        System.out.println("\n");
-        System.out.println("Nó: [120]");
-        arvore.verificarGrau(120);
-        System.out.println("\n");
-        System.out.println("Nó: [103]");
-        arvore.verificarGrau(103);
-        System.out.println("\n");
-        System.out.println("############################################");
-        System.out.println("ALTURA");
-        System.out.println("Nó: [50]");
-        arvore.verificaAltura(50);
-        System.out.println("\n");
-        System.out.println("Nó: [110]");
-        arvore.verificaAltura(110);
-        System.out.println("\n");
-        System.out.println("Nó: [25]");
-        arvore.verificaAltura(25);
-        System.out.println("\n");
-        System.out.println("Nó: [105]");
-        arvore.verificaAltura(105);
-        System.out.println("\n");
-        System.out.println("Nó: [120]");
-        arvore.verificaAltura(120);
-        System.out.println("\n");
-        System.out.println("Nó: [103]");
-        arvore.verificaAltura(103);
-        System.out.println("\n");
-        System.out.println("############################################");
-        System.out.println("PROFUNDIDADE");
-        System.out.println("Nó: [50]");
-        arvore.verificarProfundidade(50);
-        System.out.println("\n");
-        System.out.println("Nó: [110]");
-        arvore.verificarProfundidade(110);
-        System.out.println("\n");
-        System.out.println("Nó: [25]");
-        arvore.verificarProfundidade(25);
-        System.out.println("\n");
-        System.out.println("Nó: [105]");
-        arvore.verificarProfundidade(105);
-        System.out.println("\n");
-        System.out.println("Nó: [120]");
-        arvore.verificarProfundidade(120);
-        System.out.println("\n");
-        System.out.println("Nó: [103]");
-        arvore.verificarProfundidade(103);
-        System.out.println("\n");
-        System.out.println("############################################");
-        System.out.println("NÍVEL");
-        System.out.println("Nó: [50]");
-        arvore.verificarNivel(50);
-        System.out.println("\n");
-        System.out.println("Nó: [110]");
-        arvore.verificarNivel(110);
-        System.out.println("\n");
-        System.out.println("Nó: [25]");
-        arvore.verificarNivel(25);
-        System.out.println("\n");
-        System.out.println("Nó: [105]");
-        arvore.verificarNivel(105);
-        System.out.println("\n");
-        System.out.println("Nó: [120]");
-        arvore.verificarNivel(120);
-        System.out.println("\n");
-        System.out.println("Nó: [103]");
-        arvore.verificarNivel(103);
-        System.out.println("\n");
-        System.out.println("############################################");
-        System.out.println("SUBARVORES");
 
+        arvore.inveterLadosSubarvores();
+
+        System.out.println("\nÁrvore com Lados Invertidos:");
+        arvore.imprimir();*/
+
+        ArvoreBinaria arvore = new ArvoreBinaria(50);
+        arvore.adicionaNo(new No(45), arvore.getArvoreBinaria());
+        arvore.adicionaNo(new No(55), arvore.getArvoreBinaria());
+        arvore.adicionaNo(new No(40), arvore.getArvoreBinaria());
+        arvore.adicionaNo(new No(48), arvore.getArvoreBinaria());
+        arvore.adicionaNo(new No(53), arvore.getArvoreBinaria());
+        arvore.adicionaNo(new No(60), arvore.getArvoreBinaria());
+        arvore.adicionaNo(new No(36), arvore.getArvoreBinaria());
+        arvore.adicionaNo(new No(49), arvore.getArvoreBinaria());
+        arvore.imprimir();
+
+        arvore.remover(99);
+        System.out.println("\n###################");
+        arvore.imprimir();
+        System.out.println("\n###################");
+        arvore.imprimirEmOrdem(arvore.getArvoreBinaria());
     }
 }

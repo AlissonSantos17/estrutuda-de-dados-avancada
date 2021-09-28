@@ -38,6 +38,61 @@ public class ArvoreBinaria {
         }
     }
 
+    public void remover(int valor) {
+        remover(raiz, valor);
+    }
+
+    public No remover(No no, int valor) {
+        if (no != null) {
+            if (valor < no.valor) {
+                no.esquerdo = remover(no.esquerdo, valor);
+            } else if (valor > no.valor) {
+                no.direito = remover(no.direito, valor);
+            } else if (no.esquerdo != null && no.direito != null) {
+                System.out.println("O Nó " + no.valor + " foi removido.");
+                no.valor = getMenor(no.direito).valor;
+                no.direito = removeMenor(no.direito);
+            } else if (no.esquerdo == null) {
+                no = no.direito;
+            } else if (no.direito == null) {
+                no = no.esquerdo;
+            }
+
+            if (valor != this.raiz.valor) {
+                return no;
+            } else {
+                System.out.println("A raiz foi excluída.");
+                this.raiz.valor = 0;
+                return no = null;
+            }
+        } else {
+            System.out.println("O Nó não existe na árvore.");
+            return null;
+        }
+    }
+
+    public No getMenor(No no) {
+        if (no != null) {
+            while(no.esquerdo != null) {
+                no = no.esquerdo;
+            }
+        }
+        return no;
+    }
+
+    public No removeMenor(No no) {
+        if (no == null) {
+            System.out.println("Erro, o Nó é nulo.");
+        } else if (no.esquerdo != null) {
+            no.esquerdo = removeMenor(no.esquerdo);
+            return no;
+        } else {
+            return no.direito;
+        }
+
+        return null;
+    }
+
     public No busca(int valor) {
         return busca(this.raiz, valor);
     }
@@ -109,19 +164,6 @@ public class ArvoreBinaria {
         System.out.println("O nivel do Nó " + valor + " é " + verificarProfundidade(noEncontrado));
     }
 
-/*    public int verificarNivel(No no, int valor) {
-        if (no == null) {
-            return -1;
-        } else if (no.valor == valor) {
-            return 0;
-        } else {
-            if(no.valor > valor) {
-                return verificarNivel(no.esquerdo, valor) + 1;
-            }
-        }
-        return verificarNivel(no.direito, valor) + 1;
-    }*/
-
     public No subArvore(int valor) {
         return busca(valor);
     }
@@ -134,6 +176,24 @@ public class ArvoreBinaria {
         } else {
             return 1 + verificarNoFolha(no.esquerdo) + verificarNoFolha(no.direito);
         }
+    }
+
+    public void inveterLadosSubarvores() {
+        raiz = inveterLadosSubarvores(this.raiz);
+    }
+
+    public No inveterLadosSubarvores(No no) {
+        if (no == null) {
+            return no;
+        }
+
+        No esquerda = inveterLadosSubarvores(no.esquerdo);
+        No direita = inveterLadosSubarvores(no.direito);
+
+        no.esquerdo = direita;
+        no.direito = esquerda;
+
+        return no;
     }
 
     // Imprimir Em-Ordem (ERD)
@@ -164,5 +224,13 @@ public class ArvoreBinaria {
         imprimirPosOrdem(raiz.esquerdo);
         imprimirPosOrdem(raiz.direito);
         System.out.print(raiz.valor + "\t ");
+    }
+
+    public void imprimir() {
+
+        Impressao<No> p = new Impressao<>(n -> n.valor + "", n -> n.esquerdo, n -> n.direito);
+        p.setSquareBranches(false);
+        p.printTree(raiz);
+
     }
 }
