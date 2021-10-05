@@ -112,6 +112,21 @@ public class ArvoreBinaria {
 
     }
 
+    public No buscaSubArvore(No no, int valor) {
+        System.out.println("Focando no Nó -> " + no.valor);
+        if(no.valor == valor) {
+            System.out.println("O Nó " + valor + " foi encontrado!");
+            return no;
+        } else if ((valor < no.valor) && (no.esquerdo != null)) {
+            return busca(no.esquerdo, valor);
+        } else if ((valor > no.valor) && (no.direito != null)) {
+            return busca(no.direito, valor);
+        } else {
+            System.out.println("O Nó " + valor + " não foi encontrado.");
+            return null;
+        }
+    }
+
     public void verificarGrau(int valor) {
         No noEncontrado = busca(valor);
 
@@ -165,7 +180,7 @@ public class ArvoreBinaria {
     }
 
     public No subArvore(int valor) {
-        return busca(valor);
+        return buscaSubArvore(this.raiz, valor);
     }
 
     public int verificarNoFolha(No no) {
