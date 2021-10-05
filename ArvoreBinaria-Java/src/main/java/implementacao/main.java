@@ -11,10 +11,6 @@ public class main {
         arvore.adicionaNo(new No(6), arvore.getArvoreBinaria());
         arvore.adicionaNo(new No(9), arvore.getArvoreBinaria());
 
-        System.out.println("Subarvores:");
-        arvore.subArvore(70);
-        System.out.println("\n");
-
         System.out.println("Árvore Original:");
         arvore.imprimir();
         System.out.println("\n");
